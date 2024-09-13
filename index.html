@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Як створювати сайти у Visual Studio Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007bff;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Як створювати сайти у Visual Studio Code</h1>
+        
+        <div class="section">
+            <h2>Що таке Visual Studio Code?</h2>
+            <p>Visual Studio Code (VS Code) - це безкоштовний редактор коду від Microsoft, який підтримує багато мов програмування та має велику кількість розширень. VS Code особливо популярний серед веб-розробників завдяки своїй гнучкості та потужним функціям.</p>
+        </div>
+
+        <div class="section">
+            <h2>Створення проекту</h2>
+            <ol>
+                <li>Відкрийте VS Code</li>
+                <li>Виберіть "File" > "Open Folder"</li>
+                <li>Створіть нову папку для вашого проекту</li>
+                <li>Створіть файли index.html, style.css, і script.js</li>
+            </ol>
+            <p>Структура вашого проекту може виглядати так:</p>
+            <pre><code>
+my-website/
+│
+├── index.html
+├── style.css
+└── script.js
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Написання коду</h2>
+            <p>VS Code надає підсвічування синтаксису, автодоповнення та інші корисні функції для написання HTML, CSS та JavaScript. Ось базовий приклад HTML-файлу:</p>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Моя перша веб-сторінка&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Ласкаво просимо на мою веб-сторінку!&lt;/h1&gt;
+    &lt;p&gt;Це мій перший сайт, створений за допомогою Visual Studio Code.&lt;/p&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <p>Розбір коду:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> - оголошення типу документа для HTML5</li>
+                <li><code>&lt;html lang="uk"&gt;</code> - кореневий елемент HTML з атрибутом мови</li>
+                <li><code>&lt;head&gt;</code> - містить метадані та посилання на зовнішні ресурси</li>
+                <li><code>&lt;meta charset="UTF-8"&gt;</code> - встановлює кодування символів</li>
+                <li><code>&lt;meta name="viewport"&gt;</code> - налаштовує відображення на мобільних пристроях</li>
+                <li><code>&lt;title&gt;</code> - встановлює заголовок сторінки</li>
+                <li><code>&lt;link&gt;</code> - підключає зовнішній CSS-файл</li>
+                <li><code>&lt;body&gt;</code> - містить видимий вміст сторінки</li>
+                <li><code>&lt;script&gt;</code> - підключає зовнішній JavaScript-файл</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Використання терміналу</h2>
+            <p>VS Code має вбудований термінал. Ви можете використовувати його для запуску команд npm, git та інших інструментів командного рядка. Щоб відкрити термінал, натисніть Ctrl+` (або View > Terminal у меню).</p>
+            <p>Приклад команд:</p>
+            <pre><code>
+# Ініціалізація git репозиторію
+git init
+
+# Встановлення пакету через npm
+npm install lodash
+
+# Запуск локального сервера (якщо встановлено розширення Live Server)
+live-server
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Розширення</h2>
+            <p>Встановіть корисні розширення для покращення вашого досвіду розробки:</p>
+            <ul>
+                <li><strong>Live Server</strong>: Дозволяє запускати локальний сервер з автоматичним оновленням сторінки</li>
+                <li><strong>Prettier</strong>: Автоматично форматує ваш код</li>
+                <li><strong>ESLint</strong>: Допомагає знаходити та виправляти проблеми у JavaScript коді</li>
+                <li><strong>Auto Rename Tag</strong>: Автоматично перейменовує парні HTML/XML теги</li>
+            </ul>
+            <p>Щоб встановити розширення, перейдіть у вкладку Extensions (Ctrl+Shift+X) та знайдіть потрібне розширення.</p>
+        </div>
+
+        <div class="section">
+            <h2>Корисні комбінації клавіш</h2>
+            <ul>
+                <li><code>Ctrl+S</code>: Зберегти файл</li>
+                <li><code>Ctrl+/</code>: Закоментувати/розкоментувати вибрані рядки</li>
+                <li><code>Alt+Up/Down</code>: Перемістити рядок вгору/вниз</li>
+                <li><code>Ctrl+F</code>: Пошук</li>
+                <li><code>Ctrl+H</code>: Заміна</li>
+                <li><code>F1</code> або <code>Ctrl+Shift+P</code>: Відкрити командну палітру</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://code.visualstudio.com/docs" target="_blank" class="btn">Офіційна документація VS Code</a>
+        </div>
+    </div>
+
+    <script>
+        // Можна додати інтерактивність, наприклад, плавну прокрутку до розділів
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
